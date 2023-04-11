@@ -1,10 +1,19 @@
-name: comp30830
+name: base
 channels:
   - defaults
 dependencies:
-  - python
-  - scikit-learn
-  - numpy
-  - jupyterlab
-  - pandas
-prefix: /Users/xiaoxinshaoye/opt/anaconda3/envs/comp30830
+  - conda
+  - python=3.9
+  - python.app
+  - conda-env
+  - conda-build
+  - conda-verify
+  - _ipyw_jlab_nb_ext_conf
+  - anaconda
+  - anaconda-navigator
+  - navigator-updater
+  - nb_conda_kernels
+  - jupyter_contrib_nbextensions
+  - mysqlclient
+  - sqlalchemy
+prefix: /Users/xiaoxinshaoye/opt/anaconda3
