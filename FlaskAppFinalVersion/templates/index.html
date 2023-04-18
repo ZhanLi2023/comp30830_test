@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dublin Bike Station Information</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script defer src="{{ url_for('static', filename='index.js') }}"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+{#    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC52j5KuFhqFUz3qfPc7s16bmfqRLb9wy8&callback=initMap&libraries=places,geometry,visualization&v=weekly"#}
+{#            async defer></script>#}
+</head>
+<body>
+<main>
+    <div class="main-container">
+        <div class="left-panel">
+            <div class="mode">
+                <input id="dark_mode" type="checkbox"/>
+                <label>Dark Mode</label>
+            </div>
+            <div class="logo">
+                <a href="#">
+                    <img src="{{ url_for('static', filename='logo.png') }}" alt="Dublin Bikes"
+                         style="height:80px; width:150px; margin-bottom: 30px; display: block; margin-left: auto; margin-right: auto;">
+                </a>
+            </div>
+
+            <h1>Available Bikes</h1>
+            <h2>Click for Detailed Information</h2>
+            <div class="button-container">
+                <button id="current">Historical</button>
+                <button id="prediction">Predicted</button>
+            </div>
+            <div class="station-selection">
+                <div id="form-container" class="hidden"></div>
+                <select id="station-selector">
+                </select>
+                <button id="confirm-button">Confirm</button>
+            </div>
+
+            <div class="daily-buttons" id="daily-buttons">
+            </div>
+            <div>
+                <canvas id="weekly-chart"></canvas>
+            </div>
+            <div>
+                <canvas id="hourly-chart"></canvas>
+            </div>
+        </div>
+
+        <div class="right-panel">
+
+            <div id="map-container">
+                <div class="heatmap-toggle">
+                    <input type="checkbox" id="heatmap-checkbox" class="custom-checkbox">
+                    <label for="heatmap-checkbox">Show Heatmap</label>
+                </div>
+                <div class="weather-input-container">
+                    <div class="weather-info">
+                        <p id="weather-description"></p>
+                        <p id="weather-temperature"></p>
+                    </div>
+                    <div class="location-inputs">
+                        <input id="start-location" type="text" placeholder="Enter starting location"
+                               list="start-history"/>
+                        <datalist id="start-history"></datalist>
+                        <input id="end-location" type="text" placeholder="Enter ending location" list="end-history"/>
+                        <datalist id="end-history"></datalist>
+
+                        <div class="button-container">
+                            <button id="find">Find the nearest stations</button>
+                            <button id="clear">Clear the text</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="map"></div>
+            </div>
+        </div>
+    </div>
+</main>
+<footer>
+    <p>&copy; 2023 Dublin Bikes. All rights reserved.</p>
+</footer>
+</body>
+</html>
+
