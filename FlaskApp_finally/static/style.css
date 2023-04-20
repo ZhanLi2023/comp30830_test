@@ -1,0 +1,359 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+
+.main-container {
+    display: flex;
+    height: 100vh;
+    min-height: 125vh;
+}
+
+.left-panel {
+    width: 25%;
+    padding: 20px;
+}
+
+.right-panel {
+    width: 75%;
+    border-left: 1px solid #e0e0e0;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+}
+
+h1, h2 {
+    text-align: center;
+
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: 500;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 400;
+    color: #34495e;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.station-selection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.station-selection button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 4px 2px;
+    cursor: pointer;
+    padding: 10px 24px;
+    border-radius: 8px;
+    transition-duration: 0.4s;
+}
+
+.station-selection button:hover {
+    background-color: #45a049;
+}
+
+#station-selector {
+    margin-right: 10px;
+    padding: 5px;
+}
+
+#confirm-button {
+    font-size: 14px;
+    padding: 5px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#find, #clear {
+    background-color: #4caf50;
+    border: none;
+    color: white;
+    padding: 4px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+
+button:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+.daily-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.daily-button {
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    margin: 4px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    background-image: radial-gradient(circle at center, #2196f3, rgba(33, 150, 243, 0.7));
+}
+
+#current, #prediction {
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    margin: 4px;
+    margin-bottom: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    background-color: rgb(238, 108, 48, 0.7);
+}
+
+#current:hover, #prediction:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+canvas {
+    width: 100%;
+    margin-top: 50px;
+}
+
+.hidden {
+    display: none;
+}
+
+#form-container {
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    padding: 20px;
+    width: 100%;
+    max-width: 500px;
+}
+
+#form-container label {
+    display: block;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+#form-container input,
+#form-container select {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    padding: 10px;
+    width: 100%;
+}
+
+#form-container input[type="submit"] {
+    background-color: rgb(0, 103, 147);
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 20px;
+    padding: 12px 20px;
+    text-transform: uppercase;
+    width: auto;
+}
+
+#form-container input[type="submit"]:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+#form-container #prediction-result {
+    margin-top: 30px;
+}
+
+#prediction-result {
+    text-align: center;
+}
+
+#map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#map-container {
+    position: relative;
+    flex: 1;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.heatmap-toggle {
+    position: absolute;
+    top: 10px;
+    left: 200px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px;
+    height: 40px;
+    z-index: 1000;
+}
+
+.custom-checkbox {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 27px;
+    border: 1px solid #4CAF50;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+}
+
+.custom-checkbox:checked {
+    background-color: #4CAF50;
+}
+
+#heatmap-checkbox + label {
+    position: relative;
+    top: -10px;
+}
+
+.weather-info {
+    position: relative;
+    z-index: 2;
+}
+
+input {
+    font-size: 14px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 5px;
+}
+
+.weather-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    top: 10px;
+    margin-bottom: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: transparent;
+    border-radius: 5px;
+}
+
+.weather-info p,
+.weather-info h2 {
+    margin: 0;
+    padding: 0 10px;
+    text-align: center;
+    color: black;
+}
+
+.weather-info p {
+    font-weight: 1000;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.weather-info h2 {
+    font-size: 22px;
+    margin-right: 10px;
+    margin-top: 20px;
+}
+
+.weather-input-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 5px;
+    z-index: 1000;
+    gap: 20px;
+}
+
+.location-inputs {
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    background-color: rgb(0, 103, 147);
+    padding: 15px;
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+
+.mode {
+    margin-left: 270px;
+    margin-top: 0px;
+}

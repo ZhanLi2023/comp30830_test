@@ -1,0 +1,296 @@
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    line-height: 2.2;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+.name {
+    margin-left: -25px;
+}
+
+.background {
+    width: 100%;
+    height: 1300px;
+    margin-top: 20px;
+}
+
+.contact_us {
+    font-size: 30px;
+    margin-top: -1300px;
+}
+
+.name {
+    font-size: 30px;
+    margin-top: -150px;
+    margin-left: 15%;
+}
+
+.name h1 {
+    color: #2c3e50;
+}
+
+.logo {
+    width: 150px;
+    height: 135px;
+}
+
+.logo img {
+    width: 100%;
+    height: auto;
+}
+
+.nav {
+    margin-top: 325px;
+    position: absolute;
+    margin-left: 35%;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav li {
+    width: 200px;
+    height: 50px;
+    margin-left: 0;
+    float: right;
+    font-size: 25px;
+    display: block;
+}
+
+.nav a {
+    display: block;
+    width: 400px;
+    font-weight: bold;
+    color: white;
+    background-color: chocolate;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.nav a:hover,
+.nav a:active {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+.introduce1 {
+    margin-left: 5%;
+    width: 40%;
+    height: 300px;
+}
+
+.introduce1 h1 {
+    color: cyan;
+}
+
+.introduce2 {
+    font-size: 23px;
+    width: 40%;
+    height: 300px;
+    margin-left: 500px;
+    margin-top: -300px;
+}
+
+.contacts h1 {
+    color: white;
+    margin-top: 20px;
+    margin-left: 45%;
+}
+
+.message input {
+    margin-left: 100px;
+}
+
+.foot_background {
+    margin-top: 0;
+    width: 100%;
+    height: 60px;
+    background-color: dimgrey;
+    z-index: -1;
+}
+
+.bottom_background {
+    margin-left: 0;
+    height: 350px;
+    width: 100%;
+    background-color: black;
+}
+
+.line1 {
+    margin-left: 20px;
+    height: 20px;
+    width: 97%;
+    background-color: white;
+}
+
+.line2 {
+    margin-left: 0;
+    height: 18px;
+    width: 100%;
+    background-color: black;
+}
+
+.last_content {
+    margin-left: 50px;
+    color: white;
+}
+
+.last_content h3,
+.last_content i,
+.last_content a,
+.last_content p {
+    color: white;
+}
+
+.advertisement {
+    width: 400px;
+}
+
+.advertisement h3 {
+    font-size: 25px;
+    margin-top: 20px;
+    margin-left: 25px;
+}
+
+.advertisement li {
+    font-size: 23px;
+    margin-top: 20px;
+}
+
+.information {
+    width: 200px;
+    margin-left: 500px;
+    margin-top: -290px;
+}
+
+.information h3 {
+    font-size: 25px;
+    margin-left: 0;
+    margin-top: -200px;
+}
+
+.information input,
+.information textarea {
+    width: 250px;
+    height: 30px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.information textarea {
+    height: 50px;
+    border-radius: 15px;
+}
+
+.explain {
+    width: 350px;
+    margin-left: 1000px;
+    margin-top: -320px;
+}
+
+.explain h3 {
+    color: white;
+    font-size: 25px;
+}
+
+.explain p {
+    font-size: 20px;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.consultant {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    padding: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.consultant_show {
+    flex-basis: calc(33.33% - 32px);
+    box-sizing: border-box;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-radius: 8px;
+}
+
+.consultant_show img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 16px;
+}
+
+.consultant_show h3 {
+    color: chocolate;
+    margin: 16px 0 8px;
+    font-family: sans-serif;
+    font-size: 23px;
+}
+
+.consultant_show h4 {
+    color: chocolate;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.bg_color1 {
+    width: 100%;
+    background-color: white;
+    margin-top: -10px;
+    padding-bottom: 16px;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero-text p {
+    font-size: 24px;
+}
+
+.navigation {
+    position: relative;
+    z-index: 1000;
+    width: 100%;
+    max-width: 1650px;
+    margin: 0 auto;
+}
+
+
+
